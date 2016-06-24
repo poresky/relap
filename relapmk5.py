@@ -39,10 +39,11 @@ def dicMaker():
 	while True:
 		tfile1 = 'CIET_RELAP_dic.txt'
 		try:
-			path1 = find(tfile1, '/C:')
+			path1 = find(tfile1, 'C:\Users')
 			a1 = list(path1)
 		except TypeError:
 			print 'Dictionary not found'
+			tfile1 = raw_input('Please enter dictionary name: ')
 		else:
 			break
 	llen1 = len(a1)
@@ -80,7 +81,7 @@ def dicMaker():
 while True:
 	tfile = raw_input('File name: ')
 	try:
-		path = find(tfile, 'C:\Users')
+		path = find(tfile, 'C:\Users\Reynolds')
 		path_list = list(path)
 	except TypeError:
 		print 'File not found'
