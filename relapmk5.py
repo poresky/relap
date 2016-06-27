@@ -644,7 +644,7 @@ if power_wanted:
 			num_removed += 1
 
 	#write power data to .csv by successively copying data, appending new column, then deleting old file, then rename newest file
-	os.chdir('/Users/raleighlukas/desktop')
+	os.chdir('C:\Users\Reynolds\Desktop')
 	csvfile = ftitle
 	new = ''
 	count = 0
@@ -665,6 +665,7 @@ if power_wanted:
 	for i in range(count-1):
 		os.remove(new1+csvfile)
 		new1 = 'new_'+new1
+	os.remove(csvfile)
 	os.rename(new+csvfile, csvfile)
 
 #find which types of graphs need labels
